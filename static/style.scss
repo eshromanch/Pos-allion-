@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+@import "./colors";
+@import "./cards";
+@import "./billing";
+@import "./table";
+@import "./pruducts";
+@import "./cfrom";
+@import "./invoice";
+@import "./_finalbill";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $background;
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header{
+    z-index: 1;
+    background-color: $navColor;
+   
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+    .logo{
+        text-decoration: none;
+        color: $logo;
+        font-size: 2em;
+        
+    }
+    .nav-bar ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+        li {
+            list-style: none;
+            .log-out{
+                border: none;
+                background-color: $btn;
+                color: $background;
+                padding: 0.8rem;
+                border-radius: 0.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                a{
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    color: $background;
+                }
+                &:hover{
+                    background-color: #e03b51;
+                }
+            }
+        }
+    }
+    
+}
+
+ul{
+    list-style: none;
+}

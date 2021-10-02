@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">Allion</a>
+        <nav class="nav-bar"> 
+            <ul>
+                <li></li>
+                <li><button class="log-out"><a href="#">Log out <i class="fas fa-sign-out-alt"></i></a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="groups">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Product name" name="product_name">
+            <!-- changed -->
+            <select id="options" name="options">
+                {% for catagory in catagories %}
+                <option value="{{ catagory.id }}">{{ catagory.name }}</option>
+                {% endfor %}            
+            </select>
+            <!-- changed -->
+            <input type="text" placeholder="Purchase price:" name="purchase_price">
+            <input type="text" placeholder="Selling price:" name="selling_price">
+            <button class="add">Add</button>
+        </form>
+    </div>
+    
+</body>
+</html>

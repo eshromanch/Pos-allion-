@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">Allion</a>
+        <nav class="nav-bar"> 
+            <ul>
+                <li></li>
+                <li><button class="log-out"><a href="#">Log out <i class="fas fa-sign-out-alt"></i></a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="grid-box">
+        <div class="left">
+            <div class="options">
+              <input type="text" placeholder="Search..">
+          </div>
+            <section class="product-page">
+                {% for product in products %}
+                <div class="cards">
+                  <div class="card-body">
+                    <div class="title">
+                        <h4 class="pName">{{ product.name }}</h4>
+                        <h5 >ID: {{ product.id }}</h5>
+                        <h5 class="price">{{ product.selling_price }}</h5>
+                        <h5>In stock 45</h5>
+                        <input class="qty" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                      <a><button class="add-cart">
+                          Add
+                      </button></a>
+                    </div>
+                  </div>           
+                </div>
+                {% endfor %}
+             </section>
+             <!-- <div class="groups">
+                <form action="">
+                    <input type="text" placeholder="Products id">
+                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                       <a href="invoice.html"><button class="add">Add</button></a>
+                </form>
+                
+            </div> -->
+           
+        
+        </div>
+        <div class="right">
+            <div class="checkout">
+                <h4>Invoice: </h4>
+                <div class="customer-info">
+                    <div class="rows">
+                        <h4>Name: </h4>
+                        <h4>{{ customers.name }}</h4>
+                    </div>
+                    <div class="rows">
+                        <h4>Shop Name: </h4>
+                        <h4>{{ customers.shopname }}</h4>
+                    </div>
+                    <div class="rows">
+                        <h4>Address: </h4>
+                        <h4>455/B mawna</h4>
+                    </div>
+                    <div class="rows">
+                        <h4>Phone: </h4>
+                        <h4>{{ customers.phone_number }}</h4>
+                    </div>
+                </div>
+               
+                <div class="product-info">
+                    <h4>All order: </h4>
+                    <div class="rows">
+                        <h4><b>Items</b></h4>
+                        <h4><b>Qty</b></h4>
+                        <h4><b>price</b></h4>
+                        
+                    </div>
+                    <div class="rows">
+                        <ul  class="list"></ul>
+                        <ul  class="list3"></ul>
+                        <ul  class="list2"></ul>
+                        
+                    </div>
+                   
+                    <!-- <table class="content-table">
+                        <thead>
+                          <tr>
+                            <th>Sl no.</th>
+                            <th>Name</th>
+                            <th>Shop name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            
+                            
+                          </tr>
+                        </tbody>
+                      </table> -->
+                    <!-- <div class="rows">
+                        <h4 class="passPName"> </h4>
+                        <h4>45 pcs </h4>
+                        <h4>5445 Taka </h4>
+                    </div>
+                    <div class="rows">
+                        <h4 class="passPName"> </h4>
+                        <h4>45 pcs </h4>
+                        <h4>5445 Taka </h4>
+                    </div>
+                    <div class="rows">
+                        <h4>Switch </h4>
+                        <h4>45 pcs </h4>
+                        <h4>5445 Taka </h4>
+                    </div> -->
+                </div>
+                <div class="rows">
+                    <button class="add-cart">Print<i class="fas fa-print"></i></button>
+                    <a href="finalbill.html" class="click-cards"> <button class="add-cart">Save<i class="fas fa-save"></i></button></a>
+                   
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

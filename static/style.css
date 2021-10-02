@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+.click-cards {
+  text-decoration: none;
+}
+
+.cards {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 20rem);
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(60deg, #293fe0 0%, #716bf2 100%);
+  width: 14rem;
+  height: 18rem;
+  border: 1px solid rgba(130, 130, 130, 0.5);
+  border-radius: 1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.card-body .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid rgba(130, 130, 130, 0.5);
+  border-radius: 50%;
+}
+
+.card-body .circle .box {
+  height: 4rem;
+}
+
+.card-body .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-body h4 {
+  padding: 0.5rem;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.card-body h5 {
+  padding: 0.5rem;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.card-body h3 {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.card-body:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.card-body input {
+  width: 50%;
+  padding: 0.1rem;
+  margin: 0.3rem;
+  border-radius: 1rem;
+  border: 1px solid #009879;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.card-body :focus {
+  outline: #7D65F6;
+}
+
+.options {
+  margin: 3rem 3rem 0rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.options input {
+  padding: 1rem;
+  width: 20rem;
+  border: 1px solid #009879;
+  border-radius: 10rem;
+  font-size: 1em;
+}
+
+.options input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.options a {
+  text-decoration: none;
+}
+
+.options .add {
+  width: 12rem;
+  border: none;
+  background-color: #58B354;
+  color: #E4EAF8;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.options .add i {
+  margin-left: 0.5rem;
+}
+
+.options .add:hover {
+  background-color: white;
+  color: #009879;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.options #options {
+  padding: 1rem;
+  border: 1px solid #009879;
+  border-radius: 1rem;
+  font-size: 0.8em;
+}
+
+.tables {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 1em;
+  font-family: 'Red Hat Display', sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 1rem 3.5rem;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  font-weight: bold;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: #009879;
+  font-weight: bold;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.product-page {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr;
+      grid-template-columns: 2fr;
+}
+
+.groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem;
+}
+
+.groups form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 25rem);
+}
+
+.groups form input {
+  padding: 1.5rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid #009879;
+}
+
+.groups form :focus {
+  outline: none;
+}
+
+.groups form select {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.groups a {
+  text-decoration: none;
+}
+
+.groups .add {
+  width: 12rem;
+  border: none;
+  background-color: #58B354;
+  color: #E4EAF8;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.groups .add i {
+  margin-left: 0.5rem;
+}
+
+.groups .add:hover {
+  background-color: white;
+  color: #009879;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.grid-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+.grid-box .right {
+  background: white;
+  height: 100vh;
+}
+
+.grid-box .right .checkout {
+  background: #F9F9FB;
+  padding: 1rem;
+  margin: 0rem;
+  height: 100vh;
+}
+
+.grid-box .right .checkout .rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem;
+}
+
+.grid-box .right .checkout .rows h4 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.grid-box .right .checkout .product-info {
+  padding: 1rem;
+}
+
+.add-cart {
+  width: 8rem;
+  border: none;
+  background-color: #58B354;
+  color: #E4EAF8;
+  padding: 0.6rem;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.add-cart i {
+  margin-left: 0.5rem;
+}
+
+.add-cart:hover {
+  background-color: white;
+  color: #009879;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.bill {
+  background: #F9F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bill .checkout {
+  background: white;
+  width: 80vh;
+  padding: 1rem;
+  margin: 0rem;
+  height: 100vh;
+}
+
+.bill .checkout .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+}
+
+.bill .checkout .center h4 {
+  padding: 0.3em;
+}
+
+.bill .checkout .rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem;
+}
+
+.bill .checkout .rows h4 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.bill .checkout .product-info {
+  padding: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #E4EAF8;
+  height: 100vh;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+header {
+  z-index: 1;
+  background-color: #201F2D;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 1.5rem;
+}
+
+header .logo {
+  text-decoration: none;
+  color: #7D65F6;
+  font-size: 2em;
+}
+
+header .nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header .nav-bar ul li {
+  list-style: none;
+}
+
+header .nav-bar ul li .log-out {
+  border: none;
+  background-color: #58B354;
+  color: #E4EAF8;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-bar ul li .log-out a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #E4EAF8;
+}
+
+header .nav-bar ul li .log-out:hover {
+  background-color: #e03b51;
+}
+
+ul {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */

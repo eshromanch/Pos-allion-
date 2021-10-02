@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">Allion</a>
+        <nav class="nav-bar"> 
+            <ul>
+                <li></li>
+                <li><button class="log-out"><a href="#">Log out <i class="fas fa-sign-out-alt"></i></a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="options">
+      <a href="{% url 'create_customer' %}">
+        <button class="add"> 
+          Create new <i class="fas fa-user-plus"></i>
+      </button>
+      </a>
+       
+    </div>
+    <section class="tables">    
+        <table class="content-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Shop name</th>
+                <th>Customer ID</th>
+                <th>Email</th>
+                <th>Mobie number</th>
+
+              </tr>
+            </thead>
+            {% for data in datas %}
+            <tbody>
+              <tr>
+                <td>{{ data.name }}</td>
+                <td>{{ data.shopname }}</td>
+                <td>{{ data.id }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.phone_number }}</td>
+              </tr>
+            </tbody>
+            {% endfor %}
+          </table>
+    </section>
+</body>
+</html>

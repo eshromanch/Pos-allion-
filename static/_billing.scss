@@ -1,0 +1,48 @@
+.options{
+    margin: 3rem 3rem 0rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    input{
+        padding: 1rem;
+        width: 20rem;
+        border: 1px solid #009879;
+        border-radius: 10rem;
+        font-size: 1em;
+        
+    }
+    input[type=text]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      a{
+          text-decoration: none;
+      }
+    .add{
+        width: 12rem;
+        border: none;
+        background-color: $btn;
+        color: $background;
+        padding: 0.8rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-family: 'Red Hat Display', sans-serif;
+        i{
+            margin-left: 0.5rem;
+        }&:hover{
+            background-color: white;
+            color: #009879;
+            transition: 300ms;
+        }
+    }
+    #options{
+        padding: 1rem;
+        border: 1px solid #009879;
+        border-radius: 1rem;
+        font-size: 0.8em;
+    }
+}
+

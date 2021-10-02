@@ -1,0 +1,35 @@
+.bill{
+    background:  #F9F9FB;
+    display: flex;
+       justify-content: center;
+        .checkout{
+            background: white;
+            width: 80vh;
+            padding:1rem;
+            margin: 0rem;
+            height: 100vh;
+            .center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 1rem;
+                h4{
+                    padding: 0.3em;
+                }
+            }
+            .rows{
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem ;
+                h4{
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+            }
+            .product-info{
+                padding: 1rem;
+
+            }
+        }
+}

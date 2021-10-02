@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allion</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">Allion</a>
+        <nav class="nav-bar"> 
+            <ul>
+                <li></li>
+                <li><button class="log-out"><a href="{% url 'logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cards">
+        <a class="click-cards" href="{% url 'products' %}">
+            <div class="card-body">
+                <div class="circle">
+                  <img src="{% static 'icons/box.svg' %}" alt="" class="box">
+                </div>
+                <div class="title">
+                    <h3>Products</h3>
+                </div>
+            </div>
+        </a>
+        <a class="click-cards" href="stock.html">
+            <div class="card-body">
+                <div class="circle">
+                  <img src="{% static 'icons/report.svg' %}" alt="" class="box">
+                </div>
+                <div class="title">
+                    <h3>Stock report</h3>
+                </div>
+            </div>
+        </a>
+        
+        <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/bank.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Bank</h3>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/employee.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Employee information</h3>
+            </div>
+        </div>
+        <a class="click-cards" href="{% url 'customer' %}">
+            <div class="card-body">
+                <div class="circle">
+                  <img src="{% static 'icons/customer.svg' %}" alt="" class="box">
+                </div>
+                <div class="title">
+                    <h3>Customer information</h3>
+                </div>
+            </div>
+        </a>
+        
+        <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/sales.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Sales report</h3>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/expansion.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Expense</h3>
+            </div>
+        </div>
+        <a class="click-cards" href="{% url 'bills' %}">
+            <div class="card-body">
+                <div class="circle">
+                  <img src="{% static 'icons/invoice.svg' %}" alt="" class="box">
+                </div>
+                <div class="title">
+                    <h3>Billing</h3>
+                </div>
+            </div>
+        </a>
+        
+        <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/bank-statement.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Seller's statements</h3>
+            </div>
+        </div> <div class="card-body">
+            <div class="circle">
+              <img src="{% static 'icons/user.svg' %}" alt="" class="box">
+            </div>
+            <div class="title">
+                <h3>Employee attendance</h3>
+            </div>
+        </div>
+        <a class="click-cards" href="{% url 'signup' %}">
+            <div class="card-body">
+                <div class="circle">
+                  <img src="{% static 'icons/access.svg' %}" alt="" class="box">
+                </div>
+                <div class="title">
+                    <h3>Employee access</h3>
+                </div>
+            </div>
+        </a>
+    </section>
+</body>
+</html>
