@@ -9,11 +9,11 @@ from .models import Invoice
 
 def multiply(x,y):
     return x*y
-
 def billing(request):
     return render(request, 'billing.html')
 def post_billing(request):
     return render(request, 'bpost.html')
+
 def billingform(request):
     # if request.method == "GET":
     #     return render(request, 'bform.html')
@@ -47,3 +47,5 @@ def invoice(request):
         return render(request, 'invoice.html', {"products": products,})
     else:
         return render(request, 'invoice.html', {"customers": customer, "products": products})
+def final_billing(request):
+    return render(request, 'finalbill.html')

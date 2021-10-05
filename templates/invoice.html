@@ -24,7 +24,7 @@
             <div class="options">
               <input type="text" placeholder="Search..">
           </div>
-            <section class="product-page">
+            <!-- <section class="product-page">
                 {% for product in products %}
                 <div class="cards">
                   <div class="card-body">
@@ -41,15 +41,15 @@
                   </div>           
                 </div>
                 {% endfor %}
-             </section>
-             <!-- <div class="groups">
-                <form action="">
-                    <input type="text" placeholder="Products id">
-                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-                       <a href="invoice.html"><button class="add">Add</button></a>
+             </section> -->
+             <div class="groups">
+                <form action="" class="formData">
+                    <input id="pName" name="pName" type="text" placeholder="Products name">
+                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="">
+                      <button type="submit" class="add">Add</button>
                 </form>
                 
-            </div> -->
+            </div>
            
         
         </div>
@@ -123,13 +123,11 @@
                 </div>
                 <div class="rows">
                     <button class="add-cart">Print<i class="fas fa-print"></i></button>
-                    <a href="finalbill.html" class="click-cards"> <button class="add-cart">Save<i class="fas fa-save"></i></button></a>
+                    <a href="{% static 'finalbill.html' %}" class="click-cards"> <button id="route" class="add-cart">Save<i class="fas fa-save"></i></button></a>
                    
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <script src="{% static 'main.js' %}"></script>

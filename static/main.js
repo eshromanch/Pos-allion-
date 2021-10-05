@@ -1,21 +1,30 @@
-const btn = document.querySelector(".add-cart");
-const productName = document.querySelector(".pName");
-const price = document.querySelector(".price");
-const list = document.querySelector(".list");
-const list2 = document.querySelector(".list2");
-const list3 = document.querySelector(".list3");
 const inputQty = document.querySelector(".qty");
+const pName = document.getElementById("pName");
+const pform = document.querySelector(".formData");
+const btn = document.querySelector(".add");
 
-btn.addEventListener("click", function(){
-    const pList = document.createElement("li");
-    const tkList = document.createElement("li");
-    const qtyList = document.createElement("li");
-    pList.innerText = productName.innerText;
-    const tPrice = price.innerText * inputQty.value;
-    tkList.innerText = tPrice;
-    qtyList.innerText = inputQty.value;
-    list.append(pList);
-    list2.append(tkList);
-    list3.append(qtyList);
-   
+let myArr = []
+
+btn.addEventListener("click", function(e, url){
+    e.preventDefault();
+   const order ={
+       productName: pName.value,
+       qty: inputQty.value
+       }
+       let orderObject= JSON.stringify(order)
+    myArr.push(order)
+    console.log(orderObject);
+    // pform.reset();
+    pform.action = url
+    console.log(pform.action)
 })
+
+
+
+// const items = document.createElement("li");
+// items.innerText = order.productName;
+// list.append(items);
+
+// const list = document.querySelector(".list");
+// const list2 = document.querySelector(".list2");
+// const list3 = document.querySelector(".list3");
