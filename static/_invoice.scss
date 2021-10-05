@@ -4,6 +4,7 @@
     .right{
         background: white;
         height: 100vh;
+        
         .checkout{
             background: #F9F9FB;
             padding:1rem;
@@ -26,7 +27,17 @@
         }
         
     }
+    .left{
+        display: fle;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
     
+}
+
+.allGroup{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .add-cart{

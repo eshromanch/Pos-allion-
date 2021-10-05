@@ -21,9 +21,9 @@
     </header>
     <section class="grid-box">
         <div class="left">
-            <div class="options">
+            <!-- <div class="options">
               <input type="text" placeholder="Search..">
-          </div>
+          </div> -->
             <!-- <section class="product-page">
                 {% for product in products %}
                 <div class="cards">
@@ -42,16 +42,33 @@
                 </div>
                 {% endfor %}
              </section> -->
-             <div class="groups">
-                <form action="" class="formData">
-                    <input id="pName" name="pName" type="text" placeholder="Products name">
-                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="">
-                      <button type="submit" class="add">Add</button>
-                </form>
-                
-            </div>
-           
-        
+             <div class="gOne">
+                <div class="groups">
+                    <form action="">
+                       <input id="customerName" name="customerName" type="text" placeholder="Customer name: ">
+                       <input id="customerId" name="customerId" type="text" placeholder="Customer ID: ">
+                       <input id="shopName" name="shopName" type="text" placeholder="Shop name: ">
+                       <input id="address" name="address" type="text" placeholder="Address: ">
+                       <input id="phoneNumber" name="phoneNumber" type="text" placeholder="phoneNumber: ">
+                       <input id="srNumber" name="srNumber" type="text" placeholder="Sr Number: ">
+                       <button type="submit" class="add" id="cAdd">Add</button>
+                    </form>
+               </div>
+            
+             </div>
+             <div class="gTwo">
+                <div class="groups">
+                    <form action="">
+                            
+                        <input id="pName" name="pName" type="text" placeholder="Products name">
+                        <input id="productId" name="productId" type="text" placeholder="Product id">
+                        <input id="pPrice" name="pPrice" type="text" placeholder="Selling price">
+                        <input id="qty" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="">
+                          <button type="submit" id="pAdd" class="add">Add</button>
+                    </form>
+                   </div>
+             </div>
+            
         </div>
         <div class="right">
             <div class="checkout">
@@ -59,19 +76,19 @@
                 <div class="customer-info">
                     <div class="rows">
                         <h4>Name: </h4>
-                        <h4>{{ customers.name }}</h4>
+                        <h4 class="cName"></h4>
                     </div>
                     <div class="rows">
                         <h4>Shop Name: </h4>
-                        <h4>{{ customers.shopname }}</h4>
+                        <h4 class="sName"></h4>
                     </div>
                     <div class="rows">
                         <h4>Address: </h4>
-                        <h4>455/B mawna</h4>
+                        <h4 class="sAddress" ></h4>
                     </div>
                     <div class="rows">
                         <h4>Phone: </h4>
-                        <h4>{{ customers.phone_number }}</h4>
+                        <h4 class="phone"></h4>
                     </div>
                 </div>
                
@@ -123,13 +140,13 @@
                 </div>
                 <div class="rows">
                     <button class="add-cart">Print<i class="fas fa-print"></i></button>
-                    <a href="{% static 'finalbill.html' %}" class="click-cards"> <button id="route" class="add-cart">Save<i class="fas fa-save"></i></button></a>
+                    <a href="#" class="click-cards"> <button id="save" class="add-cart">Save<i class="fas fa-save"></i></button></a>
                    
                 </div>
             </div>
         </div>
     </section>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{% static 'main.js' %}"></script>
 </body>
 </html>

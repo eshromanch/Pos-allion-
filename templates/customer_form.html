@@ -22,10 +22,19 @@
     <div class="groups">
         <form method="post" action="{% url 'create_customer' %}">
             {% csrf_token %}
-            <input type="text" placeholder="Name" name="name">
-            <input type="text" placeholder="Fathers name" name="fathers_name">
-            <input type="text" placeholder="Shop name" name="shopname">
+            <input type="text" placeholder="Customer Name" name="name">
+            <input type="text" placeholder="outlet" name="outlet">
             <input type="text" placeholder="Phone number" name="phone_number">
+            <input type="text" placeholder="Present addres" name="presentAdress">
+            <input type="text" placeholder="Permanent addres" name="parmanentAdress">
+            <input type="text" placeholder="District" name="district">
+            <input type="text" placeholder="Fathers name" name="fathersName">
+            <input type="text" placeholder="Father number" name="fathersNumber">
+            <input type="text" placeholder="Mother name" name="fathersName">
+            <input type="text" placeholder="Mother number" name="mothersNumber">
+            <input type="text" placeholder="Spouse name" name="spouseName">
+            <input type="text" placeholder="Spouse number" name="spouseNumber">
+            <input type="text" placeholder="Shop name" name="shopname">
             <input type="text" placeholder="Mail adress" name="email">
             <input type="text" placeholder="NID no" name="nid">
             <input type="text" placeholder="Nominee name" name="nominee_name">
