@@ -306,63 +306,80 @@
   transition: 300ms;
 }
 
-.grid-box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
-}
-
-.grid-box .right {
-  background: white;
-  height: 100vh;
-}
-
-.grid-box .right .checkout {
-  background: #F9F9FB;
-  padding: 1rem;
-  margin: 0rem;
-  height: 100vh;
-}
-
-.grid-box .right .checkout .rows {
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .groupO {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 1rem;
 }
 
-.grid-box .right .checkout .rows h4 {
-  font-size: 1em;
-  font-weight: 500;
+form .groupT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1rem;
 }
 
-.grid-box .right .checkout .product-info {
+form input {
   padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #009879;
 }
 
-.grid-box .left {
-  display: fle;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+form :focus {
+  outline: none;
 }
 
-.allGroup {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+form select {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.add-cart {
-  width: 8rem;
+a {
+  text-decoration: none;
+}
+
+.add {
+  width: 5rem;
   border: none;
   background-color: #58B354;
   color: #E4EAF8;
-  padding: 0.6rem;
+  padding: 0.8rem;
   border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,20 +390,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.add i {
   font-size: 1.2rem;
-  font-weight: 500;
-  font-family: 'Red Hat Display', sans-serif;
+  pointer-events: none;
 }
 
-.add-cart i {
-  margin-left: 0.5rem;
-}
-
-.add-cart:hover {
+.add:hover {
   background-color: white;
   color: #009879;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.remove {
+  display: none;
 }
 
 .bill {
