@@ -1,5 +1,6 @@
 const addMore = document.getElementById("pAdd");
 const tForm = document.getElementById("t");
+
 addMore.addEventListener("click", function(e){
     e.preventDefault()
 
@@ -8,15 +9,17 @@ addMore.addEventListener("click", function(e){
     tForm.appendChild(newDiv)
     newDiv.innerHTML= `<input id="pName" name="pName" type="text" placeholder="Products name">
     <input id="productId" name="productId" type="text" placeholder="Product id">
-    <input id="pPrice" name="pPrice" type="text" placeholder="Selling price">
-    <input id="qty" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="" placeholder="qty">
-    <input id="disc" name="disc" type="text" placeholder="Discount:">
-    <input id="amount" name="amount" type="text" placeholder="Amount:">
-
+    <input id="pPrice" oninput="addNumber()" name="pPrice" type="text" placeholder="Selling price">
+    <input id="qty"  oninput="addNumber()" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="" placeholder="qty">
+    <input id="disc" oninput="addNumber()" name="disc" type="text" placeholder="Discount:">
+    <input id="amount" oninput="addNumber()" name="amount" type="text" placeholder="Amount:">
     <input id="stock" name="stock" type="text" placeholder="stock:">
-    <input id="total" name="total" type="text" placeholder="Total:">
+    <input id="total" name="total" type="text" placeholder="Total: ">
     <button type="button" id="tAdd" class="add"><i class="fas fa-trash"></i></button>`
-  
+    // for (let i = 0 ; i < o.length ; i++){
+    //   let func = newDiv[i];
+    //   func.oninput = addNumber() 
+    // }
     newDiv.addEventListener("click", function(e){
         const item = e.target;
         if(item.classList[0]==="add"){
@@ -26,10 +29,21 @@ addMore.addEventListener("click", function(e){
               dlt.remove();
             });
           }
+         
         // newDiv.classList='remove'
     })
     
 })
+
+function addNumber() {
+  var x = document.getElementById("pPrice").value;
+  var y = document.getElementById("qty").value;
+  var z = document.getElementById("amount").value;
+  var disc = document.getElementById("disc").value
+  var discTotal = y * x * disc / 100 ;
+ document.getElementById("total").value = (y * x ) - z - discTotal;
+}
+
 
 
 // $(document).on("click","#cAdd", function(e){

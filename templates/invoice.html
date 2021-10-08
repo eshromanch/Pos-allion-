@@ -33,15 +33,16 @@
         <div class="groupT">
         <input id="pName" name="pName" type="text" placeholder="Products name">
         <input id="productId" name="productId" type="text" placeholder="Product id">
-        <input id="pPrice" name="pPrice" type="text" placeholder="Selling price">
-        <input id="qty" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="" placeholder="qty">
-        <input id="disc" name="disc" type="text" placeholder="Discount:">
-        <input id="amount" name="amount" type="text" placeholder="Amount:">
-    
+        <input id="pPrice" oninput= addNumber() name="pPrice" type="text" placeholder="Selling price">
+        <input id="qty"  oninput= addNumber() type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="qty " size="4" pattern="" inputmode="" placeholder="qty">
+        <input id="disc" oninput= addNumber() name="disc" type="text" placeholder="Discount:">
+        <input id="amount" oninput= addNumber() name="amount" type="text" placeholder="Amount:">
         <input id="stock" name="stock" type="text" placeholder="stock:">
-        <input id="total" name="total" type="text" placeholder="Total:">
+        <input id="total" name="total" type="text" placeholder="Total: " readonly>
         <button type="button" id="pAdd" class="add"><i class="fas fa-plus-circle"></i></button>
         </div>
+    </div>
+   
      </form>
 
      <button type="button" id="pAdd" class="add">Save  <i class="fas fa-download"></i></button>
