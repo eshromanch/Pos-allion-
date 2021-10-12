@@ -29,6 +29,7 @@
             <input id="address" name="address" type="text" placeholder="Address: ">
             <input id="phoneNumber" name="phoneNumber" type="text" placeholder="Phone number: ">
             <input id="srNumber" name="srNumber" type="text" placeholder="Sr Number: ">
+            <button type="button" id="cAdd" class="add">Add<i class="fas fa-plus-circle"></i></button>
         </div>
             <div class="groupT">
             <input id="pName" name="pName" type="text" placeholder="Products name">
@@ -39,24 +40,37 @@
             <input id="amount" oninput= addNumber() name="amount" type="text" placeholder="Amount:">
             <input id="stock" name="stock" type="text" placeholder="stock:">
             <input id="total" name="total" type="text" placeholder="Total: " readonly>
-            <button type="button" id="pAdd" class="add"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" id="pAdd" class="add">Add<i class="fas fa-plus-circle"></i></button>
          
             </div>
         
          </form>
         </div>
          <div class="right">
-           <table class="content-table" id="table">
-               <tr>
-                   <thead>
-                       <th>Product Name</th>
-                       <th>Price</th>
-                       <th>Qty</th>
-                       <th>Total</th>
-                   </thead>
-               </tr>
-           </table>
-           <button type="button" id="cAdd" class="add">Save<i class="fas fa-save"></i></button>
+            <table class="content-table" id="table1">
+                <tr>
+                    <thead>
+                        <th>Customer Name</th>
+                        <th>customer Id</th>
+                        <th>shop Name</th>
+                        <th>Address</th>
+                        <th>phone Number</th>
+                        <th>Sr Number</th>
+                    </thead>
+                </tr>
+            </table>
+            <table class="content-table" id="table">
+                <tr>
+                    <thead>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </thead>
+                </tr>
+            </table>
+        
+           <button type="button" id="sAdd" class="add">Save<i class="fas fa-save"></i></button>
         </div>
       </div>
     
