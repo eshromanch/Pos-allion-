@@ -89,6 +89,21 @@ caddMore.addEventListener("click", function(e){
     total: document.getElementById("srNumber").value,
   }
   customer.push(information)
+  $.ajax(
+    {
+    type: "POST",
+    url : "" ,
+    data: customer, //all customer data 
+    processData: false,
+    contentType: false,
+    csrf: $("input[csrfmiddlewaretoken]").value,
+success: {
+    function(newOrder){
+        console.log("success")
+    }
+}
+
+})
   let row; 
   
 customer.forEach(allOrder => {
