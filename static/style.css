@@ -249,8 +249,8 @@
 .groups form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (25rem)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 25rem);
+  -ms-grid-columns: (20rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 20rem);
 }
 
 .groups form input {
@@ -320,25 +320,15 @@ form {
 }
 
 form .groupO {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 20rem);
   margin: 1rem;
 }
 
 form .groupT {
   display: -ms-grid;
-  display: grid;
   display: grid;
   -ms-grid-columns: (20rem)[auto-fit];
       grid-template-columns: repeat(auto-fit, 20rem);
@@ -372,7 +362,7 @@ a {
   background-color: #58B354;
   color: #E4EAF8;
   padding: 0.8rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,8 +402,8 @@ a {
 .grid-box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr, 1fr;
-      grid-template-columns: 1fr, 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
   overflow: hidden;
 }
 
@@ -421,6 +411,45 @@ a {
   background-color: white;
   width: 100%;
   height: 100vh;
+}
+
+.grid-box .right .content-table1 {
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 0.8em;
+  font-family: 'Red Hat Display', sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.grid-box .right .content-table1 thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid-box .right .content-table1 th,
+.grid-box .right .content-table1 td {
+  padding: 1rem 0.5rem;
+}
+
+.grid-box .right .content-tabletbody tr {
+  border-bottom: 1px solid #dddddd;
+  font-weight: bold;
+}
+
+.grid-box .right .content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: #009879;
+  font-weight: bold;
+}
+
+.grid-box .right .content-table1 tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }
 
 .bill {

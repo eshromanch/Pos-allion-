@@ -28,24 +28,11 @@ def billingform(request):
         return redirect('invoice')
     return render(request, 'bform.html')
 def invoice(request):
-    cid = request.session.get('customerId')
-    customer = Customer.objects.get(id=cid)
     products = Product.objects.all()
-    if request.method == "POST":
-        # pd = request.POST["product_id"]
-        qt = int(request.POST["quantity"])
-        # product = Product.objects.get(id=pd)
-        # pd_price = int(product.selling_price)
-        # total = pd_price*qt
-        # pd_name = product.name
-        # Invoice.objects.create(products = product,
-        #                                 quantity = qt, total=total, customers = customer)
-        # cust_id = Invoice.objects.get(id, customers=customer.id)
-        # product_name = cust_id.products
-        # product_quantity = cust_id.quantity
-        # product_total = cust_id.total
-        return render(request, 'invoice.html', {"products": products,})
-    else:
-        return render(request, 'invoice.html', {"customers": customer, "products": products})
+    cust = Customer.objects.all()
+    # if request.method == "POST":
+    #     return render(request, 'invoice.html', {"products": products,})
+    # else:
+    return render(request, 'invoice.html', { "products": products, "cust": cust, })
 def final_billing(request):
     return render(request, 'finalbill.html')

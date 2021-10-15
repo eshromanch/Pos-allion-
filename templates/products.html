@@ -29,17 +29,38 @@
         Add catagories<i class="fas fa-plus-circle"></i>
     </button></a>
   </div>
- <section class="product-page">
-   {% for product in products %}
-    <div class="cards">
-      <div class="card-body">
-        <div class="title">
-            <h4>name: {{ product.name }}</h4>
-            <h5>price: {{ product.selling_price }}</h5>
-        </div>
-     </div>
-    </div>
-    {% endfor %}
+ <section class="tables">
+    <table class="content-table">
+        <thead>
+          <tr>
+            <th>Sl no.</th>
+            <th>Product Name</th>
+            <th>Catagories</th>
+            <th>In stock</th>
+            <th>Purchase price</th>
+            <th>Selling price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Switch</td>
+            <td>Switch</td>
+            <td>88</td>
+            <td>80 Tk</td>
+            <td>100 tk</td>
+          
+          </tr>
+          <tr class="active-row">
+            <td>2</td>
+            <td>Switch</td>
+            <td>Switch</td>
+            <td>88</td>
+            <td>80 Tk</td>
+            <td>100 tk</td>
+          </tr>
+        </tbody>
+      </table>
  </section>
    
 </body>

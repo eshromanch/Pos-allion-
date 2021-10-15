@@ -9,6 +9,6 @@ class Customer(models.Model):
     nid = models.BigIntegerField(max_length=30)
     nominee_name = models.CharField(max_length=100)
     nominee_number = models.BigIntegerField(max_length=11)
-    
+    address = models.CharField(blank=True, max_length=200)
     def __str__(self):
         return self.name

@@ -48,7 +48,7 @@ addMore.addEventListener("click", function (e){
     contentType: false,
     csrf: $("input[csrfmiddlewaretoken]").value,
 success: {
-    function(newOrder){
+    function(){
         console.log("success")
     }
 }
@@ -92,13 +92,13 @@ caddMore.addEventListener("click", function(e){
   $.ajax(
     {
     type: "POST",
-    url : "" ,
+    url : "{% url 'invoice' %}",
     data: customer, //all customer data 
     processData: false,
     contentType: false,
-    csrf: $("input[csrfmiddlewaretoken]").value,
+    csrf: $("csrfmiddlewaretoken").value,
 success: {
-    function(newOrder){
+    function(){
         console.log("success")
     }
 }
@@ -118,8 +118,12 @@ customer.forEach(allOrder => {
 
 tableOne.appendChild(row) 
 })
-
-
+$( function() {
+  var availableTags = [{% for custome in cust %}"{{cust.name}}",{% endfor %}];
+  $( "#customerName" ).autocomplete({
+    source: availableTags
+  });
+} );
 
 // $(document).on("click","#cAdd", function(e){
 //     e.preventDefault();
